@@ -1,6 +1,5 @@
 use std::net::{IpAddr,TcpStream};
 use std::collections::HashMap;
-use std::str::FromStr;
 
 #[derive(Debug)]
 pub enum PortState{
