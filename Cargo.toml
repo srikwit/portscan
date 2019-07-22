@@ -3,7 +3,13 @@ name = "portscan"
 version = "0.1.1"
 authors = ["Srikanth Suresh <4140019+srikwit@users.noreply.github.com>"]
 edition = "2018"
+description = "A repository to provide port scanning capabilities to VAPT tools"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[lib]
+name = "portscan"
+path = "src/lib.rs"
