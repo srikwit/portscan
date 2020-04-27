@@ -9,6 +9,15 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tokio = { version = "*", features = ["full"] }
+tokio-util = { version = "*", features = ["full"] }
+bytes = "*"
+http = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
+httparse = "*"
+time = "*"
 
 [lib]
 name = "portscan"
