@@ -8,7 +8,7 @@ Current scanning features:
 Best performance:
 
 Nmap:
-time nmap -sT -p 0-65535 127.0.0.1
+time nmap -sT -p 0-65535
 real    0m1.303s
 user    0m0.386s
 sys     0m0.899s
@@ -20,7 +20,21 @@ user    0m0.703s
 sys     0m1.691s
 ```
 
-[X] UDP scan
+[✓] UDP scan
+```
+Best performance:
+
+Nmap:
+time nmap -sU --max-scan-delay 0.00001s -p 0-65535
+real    28m31.938s
+user    0m7.662s
+sys     0m6.130s
+
+portscan:
+real    0m3.929s
+user    0m2.904s
+sys     0m1.778s
+```
 
 [X] SYN scan
 
