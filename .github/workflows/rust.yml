@@ -1,0 +1,20 @@
+name: Rust build
+run-name: ${{ github.actor }} is evaluating build output
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: cargo clean && cargo build --verbose --locked --frozen --benches --all-targets --tests --examples --release --future-incompat-report
+    - name: Run tests
+      run: cargo clean && cargo test --verbose --locked --frozen --benches --all-targets --tests --examples --release --future-incompat-report
